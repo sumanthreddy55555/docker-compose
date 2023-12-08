@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  nginx:
+    build:
+      context: .
+
+    ports:
+      - "6599:80"
+
+    volumes:
+      - nginxvol:/var/opt/nginx
+volumes:
+  nginxvol:
